@@ -1,0 +1,27 @@
+public class Problem3 {
+
+    public static double average(int a, int b) {
+        return (a + b) / 2.0;
+    }
+
+    public static double average(int a, int b, int c) {
+        return (a + b + c) / 3.0;
+    }
+
+    public static double average(double a, double b) {
+        return (a + b) / 2;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(average(4, 7));       // 5.5
+        System.out.println(average(2, 4, 9));    // 5.0
+        System.out.println(average(2.5, 3.5));   // 3.0
+    }
+
+    /*
+     * Why can't we declare double average(int x, int y) in the same class?
+     * Because it has the same signature (same name and same parameter types)
+     * as average(int a, int b). The return type and parameter names are not
+     * part of the method signature, so the compiler can't tell them apart.
+     */
+}
